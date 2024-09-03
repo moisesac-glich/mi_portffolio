@@ -1,33 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>paginapersonal</title>
-</head>PORTFOLIO
-<body>
-    <div class="slides">
-        <div class="slide" id="slide1">
-            <h1>Bienvenido a mi Presentación</h1>
-            <p>Introducción al tema y objetivos.</p>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Presentación Personal</title>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="./assets/style.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="social-icon" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/moisesac_/" target="_blank" class="social-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a> 
+            </div>
+        </header>
+        <div class="slides">
+            <div class="slide active" id="slide1">
+                <h1> Portfolio</h1>
+                <p>Introducción tema y objetivos.</p>
+                <p>lo que </p>
+                <p>adassasdmqwamdwdamd</p>
+            </div>
+
+          <a> hr class="" target="_blank" title="Ir a Example.com">
+
+            <div class="slide" id="slide2">
+                <h1>Contenido</h1>
+                <ul>
+                    <li>Primer punto</li>
+                    <li>Segundo punto</li>
+                    <li>Tercer punto</li>
+                </ul>
+            </div>
+            <div class="slide" id="slide3">
+                <h1>Conclusión</h1>
+                <p>Resumen y conclusiones finales.</p>
+            </div>
         </div>
-        <div class="slide" id="slide2">
-            <h1>Contenido</h1>
-            <ul>
-                <li>Primer punto</li>
-                <li>Segundo punto</li>
-                <li>Tercer punto</li>
-            </ul>
-        </div><div class="slide" id="slide3">
-            <h1>Conclusión</h1>
-            <p>Resumen y conclusiones finales.</p>
+        <div class="controls">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
         </div>
-    </div>
-    <div class="controls">
-        <button id="prev">Anterior</button>
-        <button id="next">Siguiente</button>
-    </div>
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
-<a>https://www.instagram.com/</a>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    };
+
+    document.getElementById('prev').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide); // Mostrar el primer slide al cargar
+});
+</script>
+
+
