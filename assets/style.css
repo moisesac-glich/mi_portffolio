@@ -6,6 +6,14 @@ body {
     background-color: #f0f0f0;
     
 }
+
+h1, p, ul {
+    color: #fff;
+}
+section {
+    height: 100vh;
+}
+
 .slides {
     position: relative;
     width: 100%;
@@ -31,11 +39,14 @@ body {
     font-size: 3em;
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: #faf6f6;
+
 }
 .slide p, .slide ul {
     font-size: 1.5em;
     line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left     ;
 }
 .controls {
     position: fixed;
@@ -72,16 +83,16 @@ header {
 }
 
 .social-icon {
-    font-size: 24px;
+    font-size: 25px;
     margin: 0 10px;
-    color: #333; 
+    color: #808080; 
     text-decoration: none;
 }
 
 .social-icon:hover {
     color: #007bff;
 
-
+}
 .media-links {
     text-align: center;
     margin: 20px 0;
@@ -122,10 +133,10 @@ header {
 }
 
 .slide h1, .slide p, .slide ul {
-    animation: fadeInText 1s ease-out;
+    animation: fadeInText 3s ease-out;
 }
 .controls button {
-    background-color: #0000ff75; /* Color de fondo con transparencia */
+    background-color: #1b059775; /* Color de fondo con transparencia */
     color: #fff;
     border: none;
     border-radius: 5px;
